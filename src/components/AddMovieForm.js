@@ -9,10 +9,10 @@ const releaseref= useRef();
     event.preventDefault();
     const movie = {
         title:titleref.current.value,
-        openingtext:openingref.current.value,
+        openingText:openingref.current.value,
         releaseDate:releaseref.current.value
     }
-    console.log(movie);
+    props.onAddMovie(movie);
     titleref.current.value='';
     openingref.current.value ='';
     releaseref.current.value ='';
@@ -22,7 +22,7 @@ return (
         <label htmlFor='title'>Title</label>
         <input type='text' id='title' ref={titleref} required></input>
         <label htmlFor='openingtext'>Opening Text</label>
-        <input type='text' id='openingtext' style={{height:100}} ref={openingref} required></input>
+        <textarea rows='5' id='openingtext'  ref={openingref} required></textarea>
         <label htmlFor='releasedate'>Release Date</label>
         <input type='date' id='releasedate' ref={releaseref} required></input>
         <button type='submit'>Add Movies</button>

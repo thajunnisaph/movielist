@@ -12,7 +12,7 @@
     margin-bottom: 0.5rem;
   }
   
-  .input input {
+  .input input,textarea {
     font: inherit;
     overflow: hidden;
     border-radius:0.5em;
